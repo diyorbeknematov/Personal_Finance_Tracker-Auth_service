@@ -10,7 +10,7 @@ type UserRepository interface {
 	GetUserProfile(id string) (*pb.UserProfile, error)
 	UpdateUserProfile(userProfile *pb.UpdateUserProfileReq) (*pb.UpdateUserProfileResp, error)
 	GetUsersList(fUser *pb.GetUsersListReq) (*pb.GetUsersListResp, error)
-	ChangePassword(id string, change *pb.ChangePasswordReq) (*pb.ChangePasswordResp, error)
+	ChangePassword(change *pb.ChangePasswordReq) (*pb.ChangePasswordResp, error)
 }
 
 type userRepositoryImpl struct {
@@ -67,7 +67,7 @@ func (u *userRepositoryImpl) UpdateUserProfile(userProfile *pb.UpdateUserProfile
 	}, nil
 }
 
-func (u *userRepositoryImpl) ChangePassword(id string, change *pb.ChangePasswordReq) (*pb.ChangePasswordResp, error) {
+func (u *userRepositoryImpl) ChangePassword(change *pb.ChangePasswordReq) (*pb.ChangePasswordResp, error) {
 	_, err := u.db.Exec(`
         UPDATE 
             users 
@@ -105,7 +105,7 @@ func (u *userRepositoryImpl) GetUsersList(fUser *pb.GetUsersListReq) (*pb.GetUse
 		FROM 
 			users
 		WHERE
-			delted_at IS NULL `
+			deleted_at IS NULL `
 
 	if fUser.FirstName != "" {
 		filter += fmt.Sprintf(" AND first_name LIKE $%d", len(args)+1)

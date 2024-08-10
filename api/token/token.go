@@ -47,7 +47,8 @@ func GeneratedJwtTokenRefresh(user models.User) (string, error) {
 	return token.SignedString([]byte(cfg.Jwt_SECRET_REFRESH))
 }
 
-func ExtractAndValidateToken(tokenString string, cfg *config.Config) (*Claims, error) {
+func ExtractAndValidateToken(tokenString string) (*Claims, error) {
+	cfg := config.Load()
 	token, err := jwt.ParseWithClaims(tokenString, &Claims{}, func(token *jwt.Token) (interface{}, error) {
 		return []byte(cfg.Jwt_SECRET_ACCESS), nil
 	})
@@ -68,7 +69,8 @@ func ExtractAndValidateToken(tokenString string, cfg *config.Config) (*Claims, e
 	return claims, nil
 }
 
-func ExtractClaims(tokenString string, cfg *config.Config) (*Claims, error) {
+func ExtractClaims(tokenString string) (*Claims, error) {
+	cfg := config.Load()
 	token, err := jwt.ParseWithClaims(tokenString, &Claims{}, func(token *jwt.Token) (interface{}, error) {
 		return []byte(cfg.Jwt_SECRET_REFRESH), nil
 	})

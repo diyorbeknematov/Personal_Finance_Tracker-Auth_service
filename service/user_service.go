@@ -1,6 +1,7 @@
 package service
 
 import (
+	"auth-service/api/token"
 	pb "auth-service/generated/user"
 	"auth-service/storage"
 	"context"
@@ -41,7 +42,7 @@ func (s *userServiceImpl) UpdateUserProfile(ctx context.Context, req *pb.UpdateU
 	resp, err := s.storage.UserRepository().UpdateUserProfile(req)
 	if err != nil {
 		s.logger.Error("UpdateUserProfile error", "error", err)
-		return nil, err
+		return resp, err
 	}
 	return resp, nil
 }
@@ -56,14 +57,26 @@ func (s *userServiceImpl) GetUsersList(ctx context.Context, req *pb.GetUsersList
 }
 
 func (s *userServiceImpl) ChangePassword(ctx context.Context, req *pb.ChangePasswordReq) (*pb.ChangePasswordResp, error) {
-	resp, err := s.storage.UserRepository().ChangePassword(req.GetId(), req)
+	resp, err := s.storage.UserRepository().ChangePassword(req)
 	if err != nil {
 		s.logger.Error("ChangePassword error", "error", err)
-		return nil, err
+		return resp, err
 	}
 	return resp, nil
 }
 
 func (s *userServiceImpl) ValidateToken(ctx context.Context, req *pb.ValidateTokenReq) (*pb.ValidateTokenResp, error) {
-	return nil, nil
+	claims, err := token.ExtractAndValidateToken(req.GetToken())
+	if err != nil {
+		return &pb.ValidateTokenResp{
+			Valid: false,
+		}, err
+	}
+
+	return &pb.ValidateTokenResp{
+		Valid:  true,
+		UserId: claims.Id,
+		Email:  claims.Email,
+		Role:   claims.Role,
+	}, nil
 }
