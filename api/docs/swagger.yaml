@@ -60,8 +60,8 @@ definitions:
     type: object
 info:
   contact: {}
-  description: API Gateway service
-  title: Api Gateway
+  description: Auth service
+  title: Auth Service
   version: "1.0"
 paths:
   /auth/forgot-password:

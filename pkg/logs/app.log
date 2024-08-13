@@ -1,0 +1,19 @@
+{"time":"2024-08-10T21:16:32.514789627+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-10T21:16:32.525457093+05:00","level":"ERROR","msg":"Database connection error","error":"pq: password authentication failed for user \"postgres\""}
+{"time":"2024-08-10T21:16:47.946376283+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-10T21:16:47.957436947+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-10T21:17:54.942455367+05:00","level":"ERROR","msg":"Token not found in context"}
+{"time":"2024-08-12T10:34:52.378141207+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-12T10:34:52.392736535+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-12T19:55:04.99781501+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-12T19:55:05.035627506+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-12T19:57:52.801463717+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-12T19:57:52.812088595+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-12T19:59:20.091707087+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-12T19:59:20.110412084+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-12T20:08:01.993398071+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-12T20:08:02.006712532+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T15:53:45.915385085+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T15:53:45.930464817+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T16:09:13.223168157+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T16:09:13.244091974+05:00","level":"INFO","msg":"Starting GRPC server"}

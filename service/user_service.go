@@ -65,8 +65,8 @@ func (s *userServiceImpl) ChangePassword(ctx context.Context, req *pb.ChangePass
 	return resp, nil
 }
 
-func (s *userServiceImpl) ValidateToken(ctx context.Context, req *pb.ValidateTokenReq) (*pb.ValidateTokenResp, error) {
-	claims, err := token.ExtractAndValidateToken(req.GetToken())
+func (s *userServiceImpl) ValidateToken(ctx context.Context, request *pb.ValidateTokenReq) (*pb.ValidateTokenResp, error) {
+	claims, err := token.ExtractAndValidateToken(request.GetToken())
 	if err != nil {
 		return &pb.ValidateTokenResp{
 			Valid: false,

@@ -37,9 +37,9 @@ func (c *controllerImpl) StartServer(cfg *config.Config) error {
 	return c.router.Run(c.port)
 }
 
-// @title Api Gateway
+// @title Auth Service
 // @version 1.0
-// @description API Gateway service
+// @description Auth service
 // @BasePath /api/v1
 // @schemes http
 // @in header

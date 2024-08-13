@@ -4,8 +4,8 @@
     ],
     "swagger": "2.0",
     "info": {
-        "description": "API Gateway service",
-        "title": "Api Gateway",
+        "description": "Auth service",
+        "title": "Auth Service",
         "contact": {},
         "version": "1.0"
     },
