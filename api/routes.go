@@ -2,6 +2,7 @@ package api
 
 import (
 	"auth-service/api/handler"
+	"auth-service/api/middleware"
 	"auth-service/config"
 	"auth-service/service"
 	"fmt"
@@ -31,7 +32,7 @@ func NewController() Controller {
 
 func (c *controllerImpl) StartServer(cfg *config.Config) error {
 	if c.port == "" {
-		c.port = fmt.Sprintf(":%d", cfg.HTTP_PORT)
+		c.port = fmt.Sprintf("auth_app:%d", cfg.HTTP_PORT)
 	}
 
 	return c.router.Run(c.port)
@@ -50,14 +51,18 @@ func (c *controllerImpl) SetupRoutes(authService service.AuthService, logger *sl
 	c.router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	router := c.router.Group("/api/v1")
 
-	auth := router.Group("/auth")
+	auth1 := router.Group("/auth")
 	{
-		auth.POST("/register", h.AuthHandler().RegisterUser)
-		auth.POST("/login", h.AuthHandler().LoginUser)
+		auth1.POST("/forgot-password", h.AuthHandler().ForgotPassword)
+		auth1.POST("/reset-password", h.AuthHandler().ResetPassword)
+		auth1.POST("/register", h.AuthHandler().RegisterUser)
+		auth1.POST("/login", h.AuthHandler().LoginUser)
+	}
+
+	auth := router.Group("/auth", middleware.IsAuthenticated(authService), middleware.LogMiddleware(logger))
+	{
 		auth.POST("/logout", h.AuthHandler().LogOutUser)
 		auth.POST("/roles", h.AuthHandler().ManageUserRoles)
-		auth.POST("/forgot-password", h.AuthHandler().ForgotPassword)
-		auth.POST("/reset-password", h.AuthHandler().ResetPassword)
 		auth.POST("/refresh-token", h.AuthHandler().RefreshToken)
 	}
 }

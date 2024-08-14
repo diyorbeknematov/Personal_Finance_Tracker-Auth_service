@@ -26,6 +26,9 @@ mig-force:
 mig-create:
 	migrate create -ext sql -dir $(MIGRATE_PATH) -seq personal_finance_tracker_table
 
+mig-create-db:
+	migrate create -ext sql -dir $(MIGRATE_PATH) -seq personal_finacre_tracker_database
+
 # Swaggerni generate qilish
 swag-init:
 	~/go/bin/swag init -g ./api/routes.go -o api/docs

@@ -80,3 +80,20 @@
 {"time":"2024-08-13T21:33:51.506518799+05:00","level":"ERROR","msg":"Listen error","error":"listen tcp :50050: bind: address already in use"}
 {"time":"2024-08-13T21:34:05.068082949+05:00","level":"INFO","msg":"Application started"}
 {"time":"2024-08-13T21:34:05.130008952+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-14T08:43:59.771162182+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-14T08:43:59.782346172+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-14T11:28:25.934364315+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-14T11:28:25.953597617+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-14T11:41:33.332182018+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-14T11:41:33.343712858+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-14T11:42:39.263909704+05:00","level":"ERROR","msg":"IsTokenBlacklisted error","error":"dial tcp: address localhost: missing port in address"}
+{"time":"2024-08-14T11:46:08.307396082+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-14T11:46:08.319182683+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-14T11:47:09.799622518+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-14T11:47:09.811149662+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-14T11:47:15.290514393+05:00","level":"INFO","msg":"Request received","method":"POST","path":"/api/v1/auth/roles"}
+{"time":"2024-08-14T11:47:15.30164568+05:00","level":"INFO","msg":"Response sent","status":200}
+{"time":"2024-08-14T11:49:47.088075897+05:00","level":"INFO","msg":"Request received","method":"POST","path":"/api/v1/auth/logout"}
+{"time":"2024-08-14T11:49:47.099270309+05:00","level":"INFO","msg":"Response sent","status":200}
+{"time":"2024-08-14T11:51:04.222090545+05:00","level":"INFO","msg":"Request received","method":"POST","path":"/api/v1/auth/refresh-token"}
+{"time":"2024-08-14T11:51:04.232684174+05:00","level":"INFO","msg":"Response sent","status":200}

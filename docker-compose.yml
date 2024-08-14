@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  migrate:
+    image: migrate/migrate
+    networks:
+      - finance_net
+    volumes:
+      - ./database/migrations:/migrations
+    command: ["-path", "/migrations", "-database", "postgres://postgres:03212164@postgres:5432/personal_finance_tracker?sslmode=disable", "up"]
+  
+  auth_app:
+    build: .
+    container_name: auth_app
+    ports:
+      - 8081:4444
+    networks:
+      - finance_net
+
+networks:
+  finance_net:
+    external: true
+    name: finance_net 
+    driver: bridge

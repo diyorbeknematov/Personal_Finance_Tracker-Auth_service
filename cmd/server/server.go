@@ -17,7 +17,7 @@ func StartServer(logger *slog.Logger, storage storage.IStorage) {
 	cfg := config.Load()
 
 	log.Println("Server started")
-	listener, err := net.Listen("tcp", fmt.Sprintf(":%d", cfg.GRPC_PORT))
+	listener, err := net.Listen("tcp", fmt.Sprintf("auth_app:%d", cfg.GRPC_PORT))
 	if err != nil {
 		logger.Error("Listen error", "error", err)
 		log.Fatal(err)

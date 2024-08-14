@@ -40,7 +40,7 @@ func Load() *Config {
 	config.DB_PASSWORD = cast.ToString(coalesce("DB_PASSWORD", "your_password"))
 	config.DB_NAME = cast.ToString(coalesce("DB_NAME", "your_db"))
 
-	config.Redis_HOST = cast.ToString(coalesce("REDIS_HOST", "localhost"))
+	config.Redis_HOST = cast.ToString(coalesce("REDIS_HOST", "redis"))
 	config.Redis_PORT = cast.ToInt(coalesce("REDIS_PORT", 6379))
 	config.Redis_PASSWORD = cast.ToString(coalesce("REDIS_PASSWORD", ""))
 	config.Redis_DB = cast.ToInt(coalesce("REDIS_DB", 0))

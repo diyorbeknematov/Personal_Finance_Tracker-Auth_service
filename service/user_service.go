@@ -66,8 +66,19 @@ func (s *userServiceImpl) ChangePassword(ctx context.Context, req *pb.ChangePass
 }
 
 func (s *userServiceImpl) ValidateToken(ctx context.Context, request *pb.ValidateTokenReq) (*pb.ValidateTokenResp, error) {
+	ok, err := s.storage.RedisStore().IsTokenBlacklisted(request.Token)
+	if err != nil {
+		s.logger.Error("ValidateToken error", "error", err)
+		return nil, err
+	}
+	if ok {
+		return &pb.ValidateTokenResp{
+			Valid: false,
+		}, nil
+	}
 	claims, err := token.ExtractAndValidateToken(request.GetToken())
 	if err != nil {
+		s.logger.Error("ExtractAndValidateToken error", "error", err)
 		return &pb.ValidateTokenResp{
 			Valid: false,
 		}, err
