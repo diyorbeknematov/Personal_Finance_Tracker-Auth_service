@@ -116,7 +116,7 @@ func (u *userRepositoryImpl) GetUsersList(fUser *pb.GetUsersListReq) (*pb.GetUse
 		args = append(args, fmt.Sprintf("%%%s%%", fUser.LastName))
 	}
 	if fUser.Role != "" {
-		filter += " AND role = $1"
+		filter += fmt.Sprintf(" AND role = $%d", len(args)+1)
 		args = append(args, fUser.Role)
 	}
 
@@ -126,15 +126,13 @@ func (u *userRepositoryImpl) GetUsersList(fUser *pb.GetUsersListReq) (*pb.GetUse
 	if err != nil {
 		return nil, err
 	}
-
-	filter += fmt.Sprintf(" LIMIT %d OFFSET %d", fUser.PageSize, (fUser.PageNumber-1)*fUser.PageSize)
-
 	query += filter
+	query += fmt.Sprintf(" LIMIT %d OFFSET %d", fUser.Limit, (fUser.Page-1)*fUser.Limit)
+
 	rows, err := u.db.Query(query, args...)
 	if err != nil {
 		return nil, err
 	}
-	defer rows.Close()
 
 	var users []*pb.UserProfile
 	for rows.Next() {
@@ -152,7 +150,7 @@ func (u *userRepositoryImpl) GetUsersList(fUser *pb.GetUsersListReq) (*pb.GetUse
 	return &pb.GetUsersListResp{
 		Users:      users,
 		TotalCount: totalCount,
-		PageNumber: fUser.PageNumber,
-		PageSize:   fUser.PageSize,
+		Limit: fUser.Limit,
+		Page:   fUser.Page,
 	}, nil
 }

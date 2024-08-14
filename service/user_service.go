@@ -72,11 +72,11 @@ func (s *userServiceImpl) ValidateToken(ctx context.Context, request *pb.Validat
 			Valid: false,
 		}, err
 	}
-
-	return &pb.ValidateTokenResp{
+	result := &pb.ValidateTokenResp{
 		Valid:  true,
-		UserId: claims.Id,
+		UserId: claims.ID,
 		Email:  claims.Email,
 		Role:   claims.Role,
-	}, nil
+	}
+	return result, nil
 }

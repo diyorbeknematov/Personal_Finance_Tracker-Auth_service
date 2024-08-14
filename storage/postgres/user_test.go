@@ -74,8 +74,8 @@ func TestGetUserList(t *testing.T) {
 	repo := NewUserRepository(db)
 
 	resp, err := repo.GetUsersList(&user.GetUsersListReq{
-		PageNumber: 1,
-		PageSize: 10,
+		Page: 1,
+		Limit: 10,
 		FirstName: "Test",
 	})
 

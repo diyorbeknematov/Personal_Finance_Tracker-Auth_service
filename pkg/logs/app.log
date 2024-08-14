@@ -17,3 +17,66 @@
 {"time":"2024-08-13T15:53:45.930464817+05:00","level":"INFO","msg":"Starting GRPC server"}
 {"time":"2024-08-13T16:09:13.223168157+05:00","level":"INFO","msg":"Application started"}
 {"time":"2024-08-13T16:09:13.244091974+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T16:15:02.835573729+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T16:15:02.849762899+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T16:31:43.571657406+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T16:31:43.597268957+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T16:34:21.793234718+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T16:34:21.805780944+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T16:35:42.664508673+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T16:35:42.682010705+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T16:36:01.515602685+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T16:36:01.526931958+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T17:14:45.856644796+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T17:14:45.879644316+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T17:23:46.588173934+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T17:23:46.596924006+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T17:23:59.17080191+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T17:23:59.175737139+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T17:41:23.452139326+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T17:41:23.462017081+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T17:43:44.186389633+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T17:43:44.193440995+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T17:48:12.88249207+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T17:48:12.906426587+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T17:49:32.649115318+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T17:49:32.657181468+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T17:50:21.95284973+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T17:50:21.957840255+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T17:50:48.389857809+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T17:50:48.395644888+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T17:51:15.030501707+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T17:51:15.035616493+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T17:54:24.5469734+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T17:54:24.563740365+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T18:00:05.685734841+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T18:00:05.707256404+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T18:03:00.458712084+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T18:03:00.464064993+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T18:14:43.303856915+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T18:14:43.315503448+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T18:15:05.084983503+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T18:15:05.090857056+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T18:16:17.296399969+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T18:16:17.30120712+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T18:18:53.998817545+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T18:18:54.008104116+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T18:26:47.185602568+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T18:26:47.192897658+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T18:43:55.247003437+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T18:43:55.256963962+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T18:43:55.257183906+05:00","level":"ERROR","msg":"Start server error","error":"listen tcp :8081: bind: address already in use"}
+{"time":"2024-08-13T18:44:19.13568363+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T18:44:19.155616453+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T19:00:20.067439838+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T19:00:20.078704721+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T19:00:42.578804634+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T19:00:42.58956997+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T21:33:42.123754832+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T21:33:42.479265555+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T21:33:42.479670719+05:00","level":"ERROR","msg":"Listen error","error":"listen tcp :50050: bind: address already in use"}
+{"time":"2024-08-13T21:33:51.43209081+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T21:33:51.506026559+05:00","level":"INFO","msg":"Starting GRPC server"}
+{"time":"2024-08-13T21:33:51.506518799+05:00","level":"ERROR","msg":"Listen error","error":"listen tcp :50050: bind: address already in use"}
+{"time":"2024-08-13T21:34:05.068082949+05:00","level":"INFO","msg":"Application started"}
+{"time":"2024-08-13T21:34:05.130008952+05:00","level":"INFO","msg":"Starting GRPC server"}

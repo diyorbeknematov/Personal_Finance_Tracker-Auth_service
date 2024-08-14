@@ -22,14 +22,15 @@ func StartServer(logger *slog.Logger, storage storage.IStorage) {
 		logger.Error("Listen error", "error", err)
 		log.Fatal(err)
 	}
-	defer listener.Close()
 
 	log.Printf("Listening on %s\n", listener.Addr())
 
 	s := grpc.NewServer()
-	user.RegisterAuthServiceServer(s, service.NewUserService(storage, logger))
-	err = s.Serve(listener)
-	if err != nil {
+	userService := service.NewUserService(storage, logger)
+	user.RegisterAuthServiceServer(s, userService)
+
+	
+	if err := s.Serve(listener); err != nil {
 		logger.Error("Serve error", "error", err)
 		log.Fatal(err)
 	}
