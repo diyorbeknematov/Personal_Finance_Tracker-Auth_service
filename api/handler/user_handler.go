@@ -213,6 +213,22 @@ func (h *userHandlerImpl) LogOutUser(ctx *gin.Context) {
 // @Failure 404 {object} models.Error
 // @Router /auth/roles [post]
 func (h *userHandlerImpl) ManageUserRoles(ctx *gin.Context) {
+	val, ok := ctx.Get("claims")
+	if!ok {
+        h.logger.Error("Token not found in context")
+        ctx.JSON(401, models.Error{Message: "Unauthorized"})
+        return
+    }
+	claims, ok := val.(*token.Claims)
+	if!ok {
+        h.logger.Error("Token claims not found in context")
+        ctx.JSON(401, models.Error{Message: "Unauthorized"})
+        return
+    }
+	if claims.Role!= "admin" {
+		ctx.JSON(403, models.Error{Message: "Only admin can manage user roles"})
+        return
+	}
 	var userReq models.ManageUserRoles
 
 	if err := ctx.ShouldBindJSON(&userReq); err != nil {
